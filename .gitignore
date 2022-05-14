@@ -1,4 +1,9 @@
 node_modules/
+dist/
+
 yarn.lock
 yarn-error.log
 
+.env.dev
+.env.test
+.env.prod
