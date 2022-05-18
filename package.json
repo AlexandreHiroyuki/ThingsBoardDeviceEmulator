@@ -10,6 +10,7 @@
     "build": "SET \"NODE_ENV=prod\" && sucrase ./src -d ./dist --transforms typescript,imports"
   },
   "devDependencies": {
+    "@types/node": "^17.0.34",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "eslint": "^8.0.1",
