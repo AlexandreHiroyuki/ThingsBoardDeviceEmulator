@@ -16,7 +16,8 @@ setInterval(
     postDeviceData({
       ts: Date.now(),
       values: {
-        temperature: randomGenerator(100, 1000)
+        temperature: randomGenerator(0, 100),
+        flow: randomGenerator(0, 1)
       }
     }),
   1000
