@@ -7,7 +7,7 @@ function postDeviceData(data): void {
       data
     )
     .then((res) => {
-      // console.log(`status-code: ${res.status}`)
+      console.log(`status-code: ${res.status}`)
     })
     .catch((error) => {
       console.error(error)
