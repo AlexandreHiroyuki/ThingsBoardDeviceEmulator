@@ -1,7 +1,8 @@
 import dotenv from 'dotenv'
 
 import postDeviceData from './app'
-import randomGenerator from './generators/random'
+import randomActivationGenerator from './generators/randomActivation'
+// import randomGenerator from './generators/random'
 import randomSummatoryGenerator from './generators/randomSummatory'
 
 dotenv.config({
@@ -9,16 +10,19 @@ dotenv.config({
 })
 
 const temperatureGenerator = new randomSummatoryGenerator(50, 0, 100)
-const flowGenerator = new randomSummatoryGenerator(0, 0, 1)
+const flowGenerator = new randomSummatoryGenerator(0.25, 0, 1)
+const flowActivationGenerator = new randomActivationGenerator(10, 20)
 
 setInterval(
   () =>
     postDeviceData({
       ts: Date.now(),
       values: {
-        temperature: temperatureGenerator.generate(20),
-        flow: flowGenerator.generate(0.1)
+        temperature: temperatureGenerator.generate(10),
+        flow: flowActivationGenerator.generate()
+          ? flowGenerator.generate(0.1)
+          : undefined
       }
     }),
-  1000
+  500
 )
