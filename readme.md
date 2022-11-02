@@ -20,6 +20,9 @@ Run the emulator.
 
 ```
 npm run dev
+
+--- or ---
+
 yarn dev
 ```
 
