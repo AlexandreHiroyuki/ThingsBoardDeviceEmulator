@@ -1,5 +1,7 @@
 # ThingsBoard Device Emulator
 
+Server to emulate a device telemetry connected to ThingsBoard. Easy to create and modify new generator functions and classes.
+
 ## Geting Started
 
 Download the project dependencies.
