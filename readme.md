@@ -8,6 +8,9 @@ Download the project dependencies.
 
 ```
 npm install
+
+--- or ---
+
 yarn install
 ```
 
@@ -40,9 +43,9 @@ randomGenerator(min: number, max: number)
 
 ### Random Activation Generator
 
-Outputs radomly if the device is activated or not.
+Outputs randomly if the device is activated or not.
 
-It's possible to set a minimum activation time and a maximum inactive time.
+It's possible to set a minimum and a maximum inactive time.
 
 ```
 randomActivationGenerator(min: number = 0, max: number = 3)
