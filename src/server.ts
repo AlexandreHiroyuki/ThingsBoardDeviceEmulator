@@ -9,6 +9,7 @@ dotenv.config({
 })
 
 const temperatureGenerator = new randomSummatoryGenerator(50, 0, 100)
+const luminosityGenerator = new randomSummatoryGenerator(512, 0, 1023)
 const flowGenerator = new randomSummatoryGenerator(0.25, 0, 1)
 const flowActivationGenerator = new randomActivationGenerator(5, 20)
 
@@ -18,6 +19,7 @@ setInterval(
       ts: Date.now(),
       values: {
         temperature: temperatureGenerator.generate(10),
+        luminosity: luminosityGenerator.generate(63),
         flow: flowActivationGenerator.generate()
           ? flowGenerator.generate(0.1)
           : undefined
